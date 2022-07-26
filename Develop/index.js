@@ -10,8 +10,26 @@ const questions = [{
     message: "What is the title of the project?",
     name: "Title"
 }, {
-    
-}
+    type: "input",
+    message: "What is the title of the project?",
+    name: "Title"
+},{
+    type: "input",
+    message: "What is the title of the project?",
+    name: "Title"
+},{
+    type: "input",
+    message: "What is the title of the project?",
+    name: "Title"
+},{
+    type: "input",
+    message: "What is the title of the project?",
+    name: "Title"
+},{
+    type: "input",
+    message: "What is the title of the project?",
+    name: "Title"
+},
 ]
     
     
