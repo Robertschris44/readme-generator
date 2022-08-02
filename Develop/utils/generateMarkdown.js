@@ -18,7 +18,20 @@ function renderLicenseBadge(credentials) {
     }
 };
 
-function renderLink(credentials) {
+function renderLicenseLink(credentials) {
+    if(credentials != 'None'){
+        const credentiallinks = {
+            MIT: "[MIT](https://choosealicense.com/licenses/mit/)",
+            GNU: "[GNU](https://choosealicense.com/licenses/gpl-3.0/)",
+            MPL: "[MPL](https://choosealicense.com/licenses/mpl-2.0/)",
+        }
+        return credentiallinks[license]
+    }else{
+        return '';
+    }
+}
+
+function renderTableLink(credentials) {
     if(credentials != 'None'){
         return `
         -[License](#license)
@@ -27,13 +40,15 @@ function renderLink(credentials) {
         return '';
     }
 };
+
     
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(credentials) {
 if(credentials != 'None'){
-    return " "
+    return `## License
+Licensed under the ${renderLicenseLink(credentials)} license.`
 }
   
 }
@@ -41,8 +56,8 @@ if(credentials != 'None'){
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(response) {
   return `# ${response.title}
-## ${renderLicenseSection(response.license)} ${renderLicenseBadge(response.license)}
-### ${renderLicenseLink(response.license)}
+## ${renderLicenseSection(response.credentials)} ${renderLicenseBadge(response.credentials)}
+### ${renderLicenseLink(response.credentials)}
 
 ##Table of Contents
 -[License](#license)
