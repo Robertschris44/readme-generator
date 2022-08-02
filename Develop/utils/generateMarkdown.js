@@ -66,11 +66,14 @@ function generateMarkdown(response) {
 
 
 ##Table of Contents
--[Usage](#usage)
--[Tests](#tests)
+
+-[Installation](#installation)]
 -[Contribuging](#contributing)
+-[Tests](#tests)
+-[Usage](#usage)
+
 -[Questions](#questions)
--[Installation](#installation)
+
 ${renderTableLink(response.license)}
 
 ##Installation:
