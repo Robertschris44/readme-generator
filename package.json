@@ -1,8 +1,10 @@
 {
+ 
   "name": "readme-generator",
-  "version": "1.0.0",
   "description": "## Setup Read documentation on [https://www.npmjs.com/package/inquirer#installation] Used npm install --save inquirer added gitignore for node modules and .ds_store",
+  "version": "1.0.0",
   "main": "index.js",
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,11 +12,13 @@
     "type": "git",
     "url": "git+https://github.com/Robertschris44/readme-generator.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Robertschris44/readme-generator/issues"
   },
-  "homepage": "https://github.com/Robertschris44/readme-generator#readme"
+  "homepage": "https://github.com/Robertschris44/readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
 }
