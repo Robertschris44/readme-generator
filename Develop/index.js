@@ -9,14 +9,14 @@ const questions = [{
     type: "input",
     message: "What is the title of the project?",
     name: "Title",
-    validate: nameInput =>{
-        if (nameInput) {
-            return true;
-        }else {
-            console.log('Enter name');
-            return false;
-        }
-    }
+    // validate: nameInput =>{
+    //     if (nameInput) {
+    //         return true;
+    //     }else {
+    //         console.log('Enter name');
+    //         return false;
+    //     }
+    // }
 }, 
 {
     type: "input",
@@ -26,16 +26,16 @@ const questions = [{
 {//change to list
     type: "list",
     message: "Choose a license.",
-    name: "License",
-    choices: ['Apache', 'IBM', 'MIT'],
-    validate: licenseInput = () =>{
-        if (licenseInput){
-            return true;
-        }else {
-            console.log('Please select options')
-            return false;
-        }
-    }
+    name: "license",
+    choices: ['MIT', 'GNU', 'MPL'],
+    // validate: licenseInput = () =>{
+    //     if (licenseInput){
+    //         return true;
+    //     }else {
+    //         console.log('Please select options')
+    //         return false;
+    //     }
+    // }
 },
 {
     type: "input",
@@ -51,8 +51,18 @@ const questions = [{
     type: "input",
     message: "Table of Contents",
     name: "Table of Contents",
+},
+{
+    type: "input",
+    message: "How to install",
+    name: "installation",
+},
+{
+    type: "input",
+    message: "Contributing:",
+    name: "contributing",
 }
-]
+];
     
     
     
