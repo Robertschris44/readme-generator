@@ -10,13 +10,13 @@ const generateMarkdown = require('./Develop/utils/generateMarkdown');
 const questions = [{
     type: "input",
     message: "What is the title of the project?",
-    name: "Title",
+    name: "title",
    
 }, 
 {
     type: "input",
     message: "What is the description of your project?",
-    name: "Description",
+    name: "description",
 },
 {//change to list
     type: "list",
@@ -26,29 +26,40 @@ const questions = [{
    
 },
 {
+    name: "github",
     type: "input",
     message: "What is your Github username?",
-    name: "Username",
+    
 },
 {
+    name: "usage",
+    type: "input",
+    message: "Usage",
+    
+},
+{
+    name: "tests",
     type: "input",
     message: "Test Instructions",
-    name: "tests",
+    
 },
 {
+    name: "email",
     type: "input",
     message: "What is your email address?",
-    name: "Email",
+    
 },
 {
+    name: "installation",
     type: "input",
     message: "How to install",
-    name: "installation",
+    
 },
 {
+    name: "contributors",
     type: "input",
-    message: "Contributing:",
-    name: "contributing",
+    message: "Contributors:",
+   
 }
 
 ];

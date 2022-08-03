@@ -34,7 +34,7 @@ function renderLicenseLink(license) {
 function renderTableLink(license) {
     if(license != 'None'){
         return `
-        -[License](#license)
+-[License](#license)
           `
     }else {
         return '';
@@ -57,43 +57,40 @@ Licensed under the ${renderLicenseLink(license)} license.`
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(response) {
-  return `# ${response.title}
-
-
+  return ` # ${response.title}
 
   ${renderLicenseBadge(response.license)}
 
 
 
-##Table of Contents
-
--[Installation](#installation)]
--[Contribuging](#contributing)
--[Tests](#tests)
--[Usage](#usage)
-
--[Questions](#questions)
-
+## Table of Contents
+- [Installation](#installation)
+- [Contributor](#contributor)
+- [Tests](#tests)
+- [Usage](#usage)
+- [Questions](#questions)
 ${renderTableLink(response.license)}
 
-##Installation:
-### You must install the following for this app to function:
-- ${response.installation}
 
-## Contributor:
-### ${response.contributing}
+## Installation
+${response.installation}
+
+## Contributors
+${response.contributors}
 
 
-## Tests:
-### Run the following commands in your terminal to test this app:
-### ${response.tests}
+## Tests
+${response.tests}
+
+## [Usage]
+${response.usage}
 
 ## Questions:
-### If you have any questions, you may contact at either
-### Github: https://github.com/${response.github}
-### or
+ If you have any questions, you may contact at either
+ Github: https://github.com/${response.github}
 
-### Email: ${response.email}
+Or email me at:
+${response.email}
 
 ${renderLicenseSection(response.license)}
       `
